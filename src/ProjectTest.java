@@ -17,21 +17,22 @@ public class ProjectTest {
     }
 
     @Test
-    public void test_simple_graph_1() {
+    public void isWellSorted_simpleGraph_returnTrue() {
         assertTrue(simple_graph.isWellSorted(new String[]{"A","B","C","D","E"}));
     }
 
     @Test
-    public void test_simple_graph_2() {
+    public void isWellSorted_simpleGraph_returnFalse() {
         assertFalse(simple_graph.isWellSorted(new String[]{"B","A","C","D","E"}));
     }
 
     @Test
-    public void test_simple_graph_3() {
+    public void isWellSorted_missingTask_returnFalse() {
         assertFalse(simple_graph.isWellSorted(new String[]{"A","B","C","D"}));
     }
 
-    public void test_simple_graph_4() {
+    @Test
+    public void isWellSorted_duplicateTask_returnFalse() {
         assertFalse(simple_graph.isWellSorted(new String[]{"A","A","B","C","D","E"}));
     }
 }
